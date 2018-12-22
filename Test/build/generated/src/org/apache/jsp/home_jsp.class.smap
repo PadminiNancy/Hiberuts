@@ -1,0 +1,30 @@
+SMAP
+home_jsp.java
+JSP
+*S JSP
+*F
++ 0 home.jsp
+home.jsp
++ 1 header.html
+template/header.html
++ 2 menu.html
+template/menu.html
++ 3 news.jsp
+template/news.jsp
++ 4 container.htm
+template/container.htm
++ 5 footer.html
+template/footer.html
+*L
+5,22:62
+1#1,29:84
+26#0,3:112
+1#2,43:115
+28#0,2:157
+5#3,42:159
+29#0,4:200
+1#4,52:204
+32#0,5:256
+1#5,28:261
+36#0,9:288
+*E

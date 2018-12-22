@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2014 10:15:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="noticehiber.Stud" table="STUD" schema="HR">
+        <id name="roll" type="int">
+            <column name="ROLL" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="20" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="7" />
+        </property>
+        <property name="pass" type="string">
+            <column name="PASS" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="15" />
+        </property>
+        <property name="doa" type="date">
+            <column name="DOA" length="7" />
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="50" />
+        </property>
+        <property name="course" type="string">
+            <column name="COURSE" length="10" />
+        </property>
+        <property name="sem" type="string">
+            <column name="SEM" length="51" />
+        </property>
+        <set name="studNotices" inverse="true">
+            <key>
+                <column name="ROLL" precision="5" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="noticehiber.StudNotice" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
+<web-app>
+  <context-param>
+    <param-name>ADMINCHAT_PATH</param-name>
+    <param-value>/chat/AdminChatServlet</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>ROOMLIST_PATH</param-name>
+    <param-value>/chat/RoomListServlet</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>CHROOM_PATH</param-name>
+    <param-value>/chat/ChRoomServlet</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>MainChatServlet</servlet-name>
+    <servlet-class>kogent.MainChatServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AdminChatServlet</servlet-name>
+    <servlet-class>kogent.AdminChatServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ChRoomServlet</servlet-name>
+    <servlet-class>kogent.ChRoomServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RoomListServlet</servlet-name>
+    <servlet-class>kogent.RoomListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AdminChatServlet</servlet-name>
+    <url-pattern>/AdminChatServlet</url-pattern>
+   </servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>RoomListServlet</servlet-name>
+    <url-pattern>/RoomListServlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>ChRoomServlet</servlet-name>
+    <url-pattern>/ChRoomServlet</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>MainChatServlet</servlet-name>
+    <url-pattern>/MainChatServlet</url-pattern>
+</servlet-mapping>
+
+  
+</web-app>

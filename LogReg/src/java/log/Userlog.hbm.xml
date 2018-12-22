@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 14, 2015 11:58:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="log.Userlog" table="USERLOG" schema="HR">
+        <id name="uname" type="string">
+            <column name="UNAME" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="pass" type="string">
+            <column name="PASS" length="2" />
+        </property>
+        <set name="userregs" inverse="true">
+            <key>
+                <column name="UNAME" length="15" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="log.Userreg" />
+        </set>
+    </class>
+</hibernate-mapping>

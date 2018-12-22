@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2014 10:15:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="noticehiber.StudNotice" table="STUD_NOTICE" schema="HR">
+        <composite-id name="id" class="noticehiber.StudNoticeId">
+            <key-property name="roll" type="int">
+                <column name="ROLL" precision="5" scale="0" />
+            </key-property>
+            <key-property name="nid" type="short">
+                <column name="NID" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="stud" class="noticehiber.Stud" update="false" insert="false" fetch="select">
+            <column name="ROLL" precision="5" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="ntext" type="string">
+            <column name="NTEXT" length="30" />
+        </property>
+        <property name="doa" type="date">
+            <column name="DOA" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

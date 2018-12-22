@@ -1,0 +1,57 @@
+body {
+	font-family: Vardana, Arial, Helvetica, sans-serif; font-size:12px;
+	}
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;font-size:12px;
+}
+
+a:link {
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;
+}
+
+
+a:active {
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;
+}
+
+a:visited {
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;
+}
+a:hover{
+letter-spacing:3px;
+}
+.banner {
+	font-family:"Book Antiqua";
+	font-size:36px;
+	color:#FFFFCC;
+	letter-spacing: 4px;
+}
+.style {
+	font-family: Vardana, Arial, Helvetica, sans-serif; font-size:12px;
+	}
+.greysmall {
+	font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#999999;
+	}
+.brownlink{
+	color:#8A4F28;	
+}
+.bblink{
+	color:#8A4F28;
+	font-weight: bold;
+	font-size:16px;
+}
+.brownhead {
+	color: #8A4F28;
+	font-weight: bold;
+	font-size:16px;
+}
+.boldblack {
+	font-size: 12px;
+	font-weight: bold;
+}
+.boldred {
+	color: #CB3216;
+	font-size: 12px;
+	font-weight: bold;
+}

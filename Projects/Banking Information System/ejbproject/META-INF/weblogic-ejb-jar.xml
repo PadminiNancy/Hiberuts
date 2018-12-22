@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE weblogic-ejb-jar PUBLIC "-//BEA Systems, Inc.//DTD WebLogic 8.1.0 EJB//EN"
+ "http://www.bea.com/servers/wls810/dtd/weblogic-ejb-jar.dtd">
+<weblogic-ejb-jar>
+    <weblogic-enterprise-bean>
+    <ejb-name>SessionFacadeEJB</ejb-name>
+    <caching-descriptor>
+		<max-beans-in-cache>100</max-beans-in-cache>
+	</caching-descriptor>
+	<reference-descriptor>
+		<ejb-reference-description>
+      		<ejb-ref-name>ejb/SavingsEJB</ejb-ref-name>
+			<jndi-name>savings.SavingsHome</jndi-name>
+      	</ejb-reference-description>
+		
+		<ejb-reference-description>
+      		<ejb-ref-name>ejb/CurrentEJB</ejb-ref-name>
+			<jndi-name>current.CurrentHome</jndi-name>
+      	</ejb-reference-description>
+	
+		<ejb-reference-description>
+      		<ejb-ref-name>ejb/RecurringEJB</ejb-ref-name>
+			<jndi-name>recurring.RecurringHome</jndi-name>
+      	</ejb-reference-description>
+
+	<ejb-reference-description>
+      		<ejb-ref-name>ejb/LoginEJB</ejb-ref-name>
+			<jndi-name>LoginEJB</jndi-name>
+      	</ejb-reference-description>
+
+	<ejb-reference-description>
+      		<ejb-ref-name>ejb/TransEJB</ejb-ref-name>
+			<jndi-name>trans.TransHome</jndi-name>
+    </ejb-reference-description>
+</reference-descriptor>
+  <jndi-name>SessionFacade.SessionFacadeHome</jndi-name>
+   </weblogic-enterprise-bean>
+ </weblogic-ejb-jar>

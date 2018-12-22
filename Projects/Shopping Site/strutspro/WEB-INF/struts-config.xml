@@ -1,0 +1,203 @@
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd" >
+<struts-config>
+    
+<!-- Form Bean Definitions -->
+
+    <form-beans>
+        <form-bean name="loginForm" type="com.wiley.LoginForm"/>
+		<form-bean name="categoryForm" type="com.wiley.CategoryForm" />
+		<form-bean name="productForm" type="com.wiley.ProductForm" />
+		<form-bean name="searchForm" type="com.wiley.SearchForm" />
+		<form-bean name="shoppingItemForm" type="com.wiley.ShoppingItemForm" />
+		<form-bean name="orderForm" type="com.wiley.OrderForm" />
+    </form-beans>
+
+
+    <!-- Global forwards -->
+    <global-forwards>
+        <forward name="login" path="/jsp/login.jsp"/>
+    </global-forwards>
+
+	<!--  Action Mapping Definitions  -->
+
+   <action-mappings>
+      <action path="/Login"
+              type="com.wiley.LoginAction"
+              validate="true"
+              input="/jsp/login.jsp"
+              name="loginForm"
+              scope="request" >
+			  <forward name="success" path="/do/CategoryList"/> 			 
+      </action>
+
+      <action path="/CategoryList"
+              type="com.wiley.CategoryListAction"
+              scope="request" >
+              <set-property property="loginRequired" value="true"/>
+              <forward name="success" path="/jsp/categoryList.jsp"/>
+      </action>
+
+      <action path="/AddCategory"
+              type="com.wiley.AddCategoryAction"
+			  validate="true"
+              scope="request"
+			  name="categoryForm"
+			  input="/jsp/addCategory.jsp">
+              <set-property property="loginRequired" value="true"/>
+			  <forward name="success" path="/do/CategoryList"/>
+              <forward name="error" path="/jsp/categoryList.jsp"/>
+      </action>
+
+	  <action path="/GetCategory"
+              type="com.wiley.GetCategoryAction"
+              name="categoryForm"
+              scope="request"
+              validate="false" >
+              <set-property property="loginRequired" value="true"/>
+              <forward name="success" path="/jsp/editCategory.jsp"/>
+              <forward name="error" path="/do/CategoryList"/>
+      </action>
+
+     <action path="/EditCategory"
+              type="com.wiley.EditCategoryAction"
+              name="categoryForm"
+              scope="request"
+              input="/jsp/editCategory.jsp"
+              validate="true" >
+              <set-property property="loginRequired" value="true"/>
+              <forward name="success" path="/do/CategoryList"/>
+              <forward name="error" path="/jsp/editCategory.jsp"/>
+      </action>
+
+      <action path="/DeleteCategory"
+              type="com.wiley.DeleteCategoryAction"
+              scope="request"
+              validate="false" >
+              <set-property property="loginRequired" value="true"/>
+              <forward name="success" path="/do/CategoryList"/>
+              <forward name="error" path="/do/CategoryList"/>
+      </action>
+
+
+      <action path="/ShowProduct"
+              type="com.wiley.ProductListAction"
+              scope="request" >              
+              <forward name="success" path="/jsp/productList.jsp"/>
+			  <forward name="error" path="/do/CategoryList?msg=noproducts"/>
+      </action>
+
+  
+	  <action path="/GetProduct"
+              type="com.wiley.GetProductAction"
+              name="productForm"
+              scope="request"
+              validate="false" >
+              <forward name="success" path="/jsp/editProduct.jsp"/>
+              <forward name="error" path="/do/ShowProduct"/>
+      </action>
+
+      <action path="/EditProduct"
+              type="com.wiley.EditProductAction"
+              name="productForm"
+              scope="request"
+              input="/jsp/editProduct.jsp"
+              validate="true" >
+              <forward name="success" path="/do/ShowProduct"/>
+              <forward name="error" path="/jsp/editProduct.jsp"/>
+      </action>
+
+      <action path="/AddProduct"
+              type="com.wiley.AddProductAction"
+			  validate="true"
+              scope="request"
+			  name="productForm"
+			  input="/jsp/addProduct.jsp">
+              <forward name="success" path="/do/ShowProduct"/>
+              <forward name="error" path="/jsp/productList.jsp"/>
+      </action>
+
+
+      <action path="/DeleteProduct"
+              type="com.wiley.DeleteProductAction"
+              scope="request"
+              validate="false" >
+              <forward name="success" path="/do/ShowProduct"/>
+              <forward name="error" path="/do/ShowProduct"/>
+      </action>
+
+      <action path="/DisplayCategoryList"
+              type="com.wiley.CategoryListAction"
+              scope="session" >
+             <forward name="success" path="/jsp/categories.jsp"/>
+	  </action>
+
+       <action path="/SearchProductByKeyword"
+               type="com.wiley.ProductSearchByKeywordAction"
+			   validate="true"
+			   input="/jsp/olns_default.jsp"
+               name="searchForm"
+               scope="session" >
+                  
+              <forward name="success" path="/jsp/olns_product_search_result.jsp"/>
+      </action>
+
+      <action path="/SearchProductByCategoryId"
+              type="com.wiley.ProductListAction"
+              scope="session" >              
+              <forward name="success" path="/jsp/olns_product_search_result.jsp"/>
+			  <forward name="error" path="/do/DisplayCategoryList?msg=noproducts"/>
+      </action>
+
+      <action path="/GetProductDtl"
+              type="com.wiley.GetProductAction"
+              name="productForm"
+              scope="session"
+              validate="false" >
+              <forward name="success" path="/jsp/olns_product_dtl.jsp"/>
+              <forward name="error" path="/do/ShowProduct"/>
+      </action>
+      
+      <action path="/AddItemToCart"
+               type="com.wiley.AddItem2CartAction"
+			   validate="false"
+			   input="/jsp/olns_product_dtl.jsp"
+               name="productForm"
+               scope="session">                     
+              <forward name="success" path="/jsp/olns_shopping_cart_dtl.jsp"/>
+      </action>
+
+	  <action path="/UpdateShopingCartItem"
+               type="com.wiley.AddItem2CartAction"
+			   validate="true"
+			   input="/jsp/olns_shopping_cart_dtl.jsp"
+               name="shoppingItemForm"
+               scope="session" >                     
+              <forward name="success" path="/jsp/olns_shopping_cart_dtl.jsp"/>
+      </action>
+      
+	   <action path="/RemoveShopingCartItem"
+               type="com.wiley.AddItem2CartAction"
+			   validate="true"
+			   input="/jsp/olns_shopping_cart_dtl.jsp"
+               name="shoppingItemForm"
+               scope="session" >
+                     
+              <forward name="success" path="/jsp/olns_shopping_cart_dtl.jsp"/>
+      </action>
+
+      <action path="/InsertDeliveryDtl"
+              type="com.wiley.InsertOrderAction"
+			  validate="true"
+              scope="session"
+			  name="orderForm"
+			  input="/jsp/olns_order_delivery_dtl.jsp">
+              <forward name="success" path="/jsp/olns_prod_order_dtl.jsp"/>
+		<forward name="error" path="jsp/olns_order_delivery_dtl.jsp"/>
+      </action>     
+        
+    </action-mappings>
+    <message-resources parameter="ApplicationResources" null="false" /> 
+
+</struts-config>

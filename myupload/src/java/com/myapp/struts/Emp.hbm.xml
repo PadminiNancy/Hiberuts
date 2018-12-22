@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 22, 2015 2:15:22 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Emp" table="EMP" schema="EDS2">
+        <id name="eid" type="int">
+            <column name="EID" precision="3" scale="0" />
+            <generator class="increment" />
+        </id>
+        <property name="ename" type="string">
+            <column name="ENAME" length="20" />
+        </property>
+        <property name="edesig" type="string">
+            <column name="EDESIG" length="30" />
+        </property>
+        <property name="esal" type="int">
+            <column name="ESAL" precision="10" scale="3" />
+        </property>
+        <property name="edoj" type="string">
+            <column name="EDOJ" length="7" />
+        </property>
+        <property name="eadd" type="string">
+            <column name="EADD" length="30" />
+        </property>
+        <property name="filename" type="string">
+            <column name="FILENAME" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

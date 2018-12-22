@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="ppp" type="com.myapp.struts.ppp"/>
+        <form-bean name="DraftBean"   type="com.myapp.struts.DraftBean"/>
+        <form-bean name="Branch"      type="com.myapp.struts.Branch"/>
+        <form-bean name="enquiry"     type="com.myapp.struts.enquiry"/>
+        <form-bean name="LoanBean"    type="com.myapp.struts.LoanBean"/>
+        <form-bean name="user2bean"   type="com.myapp.struts.user2bean"/>
+        <form-bean name="uploadbean"  type="com.myapp.struts.uploadbean"/>
+        <form-bean name="FeedBean"    type="com.myapp.struts.FeedBean"/>
+        <form-bean name="UserBean"    type="com.myapp.struts.UserBean"/>
+        <form-bean name="ChPassBean"  type="com.myapp.struts.ChPassBean"/>
+        <form-bean name="StopBean"    type="com.myapp.struts.StopBean"/>
+        <form-bean name="FundBean"    type="com.myapp.struts.FundBean"/>
+        <form-bean name="CompBean"    type="com.myapp.struts.CompBean"/>
+        <form-bean name="TranBean"    type="com.myapp.struts.TranBean"/>
+        <form-bean name="ChqBean"     type="com.myapp.struts.ChqBean"/>
+        <form-bean name="AdminBean"   type="com.myapp.struts.AdminBean"/>
+        <form-bean name="EmpBean"     type="com.myapp.struts.EmpBean"/>
+        <form-bean name="HolderBean"  type="com.myapp.struts.HolderBean"/>
+        <form-bean name="BrnBean"     type="com.myapp.struts.BrnBean"/>
+        <form-bean name="NomBean"     type="com.myapp.struts.NomBean"/>
+        <form-bean name="ClBean"      type="com.myapp.struts.ClBean"/>
+
+    </form-beans>
+
+    <global-exceptions>
+
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/newac_body.jsp" name="ClBean" path="/NewAcServ" scope="request" type="com.myapp.struts.NewAcServ">
+            <forward name="success" path="/holder_body.jsp" />
+            <forward name="failure" path="/newac_body.jsp" />
+        </action>
+        <action input="/holder_body.jsp" name="HolderBean" path="/NewHolderServ" scope="request" type="com.myapp.struts.NewHolderServ">
+            <forward name="success" path="/nom_body.jsp" />
+            <forward name="failure" path="/holder_body.jsp" />
+        </action>
+        <action input="/nom_body.jsp" name="NomBean" path="/NewNomServ" scope="request" type="com.myapp.struts.NewNomServ">
+            <forward name="success" path="/branch.jsp" />
+            <forward name="failure" path="/nom_body.jsp" />
+        </action>
+        <action input="/admin_home.jsp" name="EmpBean" path="/NewEmpServ" scope="request" type="com.myapp.struts.NewEmpServ">
+            <forward name="success" path="/empstatus.jsp" />
+            <forward name="failure" path="/admin_home.jsp" />
+        </action>
+        <action input="/emp_login.jsp" name="EmpBean" path="/NewEmpSearchServ" scope="request" type="com.myapp.struts.NewEmpSearchServ">
+            <forward name="success" path="/emp_home.jsp" />
+            <forward name="failure" path="/emp_login.jsp" />
+        </action>
+        <action input="/" name="ClBean" path="/ListActServ" scope="request" type="com.myapp.struts.ListActServ" validate="false">
+            <forward name="success" path="/showAc_Body.jsp" />
+            <forward name="failure" path="/emp_home.jsp" />
+        </action>
+        <action input="/" name="EmpBean" path="/ListEmpServ" scope="request" type="com.myapp.struts.ListEmpServ" validate="false">
+            <forward name="success" path="/showEmp_Body.jsp" />
+            <forward name="failure" path="/admin_home.jsp" />
+       </action>
+       <action input="/modiAcct.jsp" name="ClBean" path="/ModiAcServ" scope="request" type="com.myapp.struts.ModiAcServ" validate="false">
+            <forward name="success" path="/modiAcct.jsp" />
+            <forward name="failure" path="/emp_home.jsp" />
+       </action>
+       <action input="/modiEmp.jsp" name="EmpBean" path="/ModiEmpServ" scope="request" type="com.myapp.struts.ModiEmpServ" validate="false">
+            <forward name="success" path="/modiEmp.jsp" />
+            <forward name="failure" path="/modiEmp.jsp"/>
+        </action> 
+        <action input="/admin_login.jsp" name="AdminBean" path="/NewAdminSearchServ" scope="session" type="com.myapp.struts.NewAdminSearchServ" >
+            <forward name="success" path="/admin_home.jsp" />
+            <forward name="failure" path="/admin_login.jsp" />
+        </action>
+        <action input="/chq_insert.jsp" name="ChqBean" path="/NewChqServ" scope="request" type="com.myapp.struts.NewChqServ">
+            <forward name="success" path="/chq_body.jsp" />
+            <forward name="failure" path="/chq_insert.jsp" />
+        </action>
+        <action input="/tran_insert.jsp" name="TranBean" path="/NewTranServ" scope="request" type="com.myapp.struts.NewTranServ">
+            <forward name="success" path="/tran_body.jsp" />
+            <forward name="failure" path="/tran_insert.jsp" />
+        </action>
+        <action input="/comp_insert.jsp" name="CompBean" path="/NewCompServ" scope="request" type="com.myapp.struts.NewCompServ">
+            <forward name="success" path="/comp_body.jsp" />
+            <forward name="failure" path="/comp_insert.jsp" />
+        </action>
+        <action input="/fund_insert.jsp" name="FundBean" path="/NewFundServ" scope="request" type="com.myapp.struts.NewFundServ">
+            <forward name="success" path="/fund_body.jsp" />
+            <forward name="failure" path="/fund_insert.jsp" />
+        </action>
+        <action input="/stop_insert.jsp" name="StopBean" path="/NewStopServ" scope="request" type="com.myapp.struts.NewStopServ">
+            <forward name="success" path="/stop_body.jsp" />
+            <forward name="failure" path="/stop_insert.jsp" />
+        </action>
+        <action path="/RegUrSelfServ" type="com.myapp.struts.RegUrSelfServ" name="ChPassBean">
+             <forward name="success" path="/updated.jsp" />
+             <forward name="failure" path="/regurself.jsp" />
+        </action>
+        <action input="/" name="TranBean" path="/ListTranServ" scope="session" type="com.myapp.struts.ListTranServ" validate="false">
+             <forward name="success" path="/showtran.jsp" />
+             <forward name="failure" path="/showtran.jsp" />
+        </action>
+        <action input="/" name="CompBean" path="/ListCompServ" scope="session" type="com.myapp.struts.ListCompServ" validate="false">
+             <forward name="success" path="/showComp_List.jsp" />
+             <forward name="failure" path="/admin_home.jsp" />
+        </action>
+        <action input="/UserReg.jsp" name="UserBean" path="/NewUserServ" scope="session" type="com.myapp.struts.NewUserServ">
+             <forward name="success" path="/welcome.jsp" />
+             <forward name="failure" path="/UserReg.jsp" />
+        </action>
+        <action input="/UserLogin.jsp" name="UserBean" path="/UserLoginServ" scope="session" type="com.myapp.struts.UserLoginServ">
+             <forward name="success" path="/userhome.jsp" />
+             <forward name="failure" path="/UserLogin.jsp" />
+        </action>
+        <action input="/" name="UserBean" path="/ListUserServ" scope="session" type="com.myapp.struts.ListUserServ" validate="false">
+             <forward name="success" path="/showUser_List.jsp" />
+             <forward name="failure" path="/admin_home.jsp" />
+        </action>
+        <action input="/" name="StopBean" path="/ListStopReqServ" scope="session" type="com.myapp.struts.ListStopReqServ" validate="false">
+             <forward name="success" path="/stopReqDetails.jsp" />
+             <forward name="failure" path="/emp_home.jsp" />
+        </action>
+        <action input="/" name="FundBean" path="/ListFundTranServ" scope="session" type="com.myapp.struts.ListFundTranServ" validate="false">
+             <forward name="success" path="/showFundTran.jsp" />
+             <forward name="failure" path="/emp_home.jsp" />
+        </action>
+        <action input="/" name="ChqBean" path="/ListChqServ" scope="session" type="com.myapp.struts.ListChqServ" validate="false">
+             <forward name="success" path="/chqReq_List.jsp" />
+             <forward name="failure" path="/emp_home.jsp" />
+        </action>
+        <action input="/feed_ins.jsp" name="FeedBean" path="/FeedServ" scope="session" type="com.myapp.struts.FeedServ">
+             <forward name="success" path="/feedstatus.jsp" />
+             <forward name="failure" path="/feed_ins.jsp?msg=Invalid Feed id and Password" />
+        </action>
+        <action input="/" name="FeedBean" path="/ListFeedServ" scope="session" type="com.myapp.struts.ListFeedServ" validate="false">
+             <forward name="success" path="/showfeed.jsp" />
+             <forward name="failure" path="/admin_home.jsp" />
+        </action>
+         <action input="/" name="UploadBean" path="/UploadServ" scope="session" type="com.myapp.struts.UploadServ">
+             <forward name="success" path="/admin_home.jsp" />
+             <forward name="failure" path="/upload.jsp" />
+        </action>
+        <action input="/" name="FundBean"  path="/DeleteFundServ" scope="request" type="com.myapp.struts.DeleteFundServ" validate="false">
+             <forward name="success" path="/listfundTran.jsp" />
+             <forward name="failure" path="/showFundTran.jsp" />
+        </action>
+        <action input="/userform.jsp" name="user2bean" path="/user2Serv" scope="session" type="com.myapp.struts.user2Serv">
+             <forward name="success" path="/user2status.jsp" />
+             <forward name="failure" path="/userform.jsp" />
+        </action>
+        <action input="/" name="user2bean" path="/ListUser2Serv" scope="session" type="com.myapp.struts.ListUser2Serv" validate="false">
+             <forward name="success" path="/showuser2.jsp" />
+             <forward name="failure" path="/showuser2.jsp" />
+        </action>
+        <action input="/admin_home.jsp" name="TranBean" path="/ModiTranServ" scope="session" type="com.myapp.struts.ModiTranServ">
+             <forward name="success" path="/modiTran.jsp" />
+             <forward name="failure" path="/modiTran.jsp"/>
+        </action>
+        <action input="/modiuser.jsp" name="UserBean" path="/ModiUserServ" scope="session" type="com.myapp.struts.ModiUserServ">
+             <forward name="success" path="/modiuser.jsp" />
+             <forward name="failure" path="/modiuser.jsp"/>
+        </action>
+        <action input="/modiuser2.jsp" name="user2bean" path="/ModiUser2Serv" scope="session" type="com.myapp.struts.ModiUser2Serv">
+             <forward name="success" path="/modiuser2.jsp" />
+             <forward name="failure" path="/modiuser2.jsp"/>
+        </action>
+        <action input="/modichq.jsp" name="ChqBean" path="/ModiChqServ" scope="session" type="com.myapp.struts.ModiChqServ">
+             <forward name="success" path="/modichq.jsp" />
+             <forward name="failure" path="/modichq.jsp"/>
+        </action>
+        <action input="/modifund_tran.jsp" name="FundBean" path="/ModiFundServ" scope="session" type="com.myapp.struts.ModiFundServ">
+             <forward name="success" path="/modifund_tran.jsp" />
+             <forward name="failure" path="/modifund_tran.jsp"/>
+        </action>
+        <action input="/modistop_payment.jsp" name="StopBean" path="/ModiStopPaymentServ" scope="session" type="com.myapp.struts.ModiStopPaymentServ">
+             <forward name="success" path="/modistop_payment.jsp" />
+             <forward name="failure" path="/modistop_payment.jsp"/>
+        </action>
+        <action input="/loan.jsp" name="LoanBean" path="/LoanServ" scope="session" type="com.myapp.struts.LoanServ">
+             <forward name="success" path="/loanstatus.jsp" />
+             <forward name="failure" path="/loan.jsp"/>
+        </action>
+        <action input="/" name="LoanBean" path="/ListLoan2Serv" scope="session" type="com.myapp.struts.ListLoan2Serv" validate="false">
+             <forward name="success" path="/showloandetails.jsp" />
+             <forward name="failure" path="/emp_home.jsp"/>
+        </action>
+        <action input="/enquiry.jsp" name="enquiry" path="/NewEnqServ" scope="session" type="com.myapp.struts.NewEnqServ">
+             <forward name="success" path="/enqstatus.jsp" />
+             <forward name="failure" path="/enquiry.jsp"/>
+        </action>
+        <action input="/" name="enquiry" path="/ListEnqServ" scope="session" type="com.myapp.struts.ListEnqServ" validate="false">
+             <forward name="success" path="/showenquiry.jsp" />
+             <forward name="failure" path="/emp_home.jsp"/>
+        </action>
+        <action input="/tran_details.jsp" name="TranBean" path="/ListUserHomeServ" scope="request" type="com.myapp.struts.ListUserHomeServ" validate="false">
+             <forward name="success" path="/showuserfundtrandetails.jsp" />
+             <forward name="failure" path="/userhome.jsp"/>
+        </action>
+        <action input="/branch.jsp" name="Branch" path="/NewBranchServ" scope="session" type="com.myapp.struts.NewBranchServ">
+             <forward name="success" path="/welcome.jsp" />
+             <forward name="failure" path="/branch.jsp"/>
+        </action>
+        <action input="/draft_insert.jsp" name="DraftBean" path="/NewDraftServ" scope="session" type="com.myapp.struts.NewDraftServ">
+             <forward name="success" path="/draftstatus.jsp" />
+             <forward name="failure" path="/draft_insert.jsp"/>
+        </action>
+        <action input="/" name="DraftBean" path="/ListUserDraftServ" scope="request" type="com.myapp.struts.ListUserDraftServ" validate="false">
+             <forward name="success" path="/showuserdraft.jsp" />
+             <forward name="failure" path="/userhome.jsp"/>
+        </action>
+        <action input="/" name="DraftBean" path="/ListUserEmpDraftServ" scope="session" type="com.myapp.struts.ListUserEmpDraftServ" validate="false">
+             <forward name="success" path="/showempuserdraft.jsp" />
+             <forward name="failure" path="/emp_home.jsp"/>
+        </action>
+        <action input="/" name="ChqBean" path="/ListUserChqServ" scope="request" type="com.myapp.struts.ListUserChqServ" validate="false">
+             <forward name="success" path="/showuserchq.jsp" />
+             <forward name="failure" path="/userhome.jsp"/>
+        </action>
+        <action input="/" name="ClBean" path="/ListUserAcctServ" scope="session" type="com.myapp.struts.ListUserAcctServ" validate="false">
+             <forward name="success" path="/showuseracct.jsp" />
+             <forward name="failure" path="/userhome.jsp"/>
+        </action>
+        <action input="/" name="EmpBean" path="/DeleteEmpServ" scope="request" type="com.myapp.struts.DeleteEmpServ" validate="false">
+             <forward name="success" path="/listEmp.jsp" />
+             <forward name="failure" path="/showEmp_Body.jsp"/>
+        </action>
+        <action input="/" name="TranBean" path="/DeletetranServ" scope="request" type="com.myapp.struts.DeletetranServ" validate="false">
+             <forward name="success" path="/list_tran.jsp" />
+             <forward name="failure" path="/showtran.jsp"/>
+        </action>
+        <action input="/" name="UserBean" path="/DeleteUserServ" scope="session" type="com.myapp.struts.DeleteUserServ" validate="false">
+             <forward name="success" path="/list_user.jsp" />
+             <forward name="failure" path="/showUser_List.jsp"/>
+        </action>
+        <action input="/" name="user2bean" path="/DeleteAcctReq" scope="session" type="com.myapp.struts.DeleteAcctReq" validate="false">
+             <forward name="success" path="/list_form.jsp" />
+             <forward name="failure" path="/showuser2.jsp"/>
+        </action>
+        <action input="/" name="FeedBean" path="/DelFeedServ" scope="session" type="com.myapp.struts.DelFeedServ" validate="false">
+             <forward name="success" path="/listfeed.jsp" />
+             <forward name="failure" path="/showfeed.jsp"/>
+        </action>
+        <action input="/" name="ClBean" path="/DelAccountServ" scope="session" type="com.myapp.struts.DelAccountServ" validate="false">
+             <forward name="success" path="/listAct.jsp" />
+             <forward name="failure" path="/showAc_Body.jsp"/>
+        </action>
+        <action input="/" name="ChqBean" path="/DelChqReqServ" scope="session" type="com.myapp.struts.DelChqReqServ" validate="false">
+             <forward name="success" path="/listchqReq.jsp" />
+             <forward name="failure" path="/chqReq_List.jsp"/>
+        </action>
+        <action input="/" name="LoanBean" path="/DeleteLoanServ" scope="session" type="com.myapp.struts.DeleteLoanServ" validate="false">
+             <forward name="success" path="/listloandetails.jsp" />
+             <forward name="failure" path="/showloandetails.jsp"/>
+        </action>
+        <action input="/" name="DraftBean" path="/DeleteDraftReq" scope="session" type="com.myapp.struts.DeleteDraftReq" validate="false">
+             <forward name="success" path="/listuserempdraft.jsp" />
+             <forward name="failure" path="/showempuserdraft.jsp"/>
+        </action>
+        <action input="/" name="enquiry" path="/DeleteEnquiryServ" scope="session" type="com.myapp.struts.DeleteEnquiryServ" validate="false">
+             <forward name="success" path="/list_enquiry.jsp" />
+             <forward name="failure" path="/showenquiry.jsp"/>
+        </action>
+        <action input="/" name="CompBean" path="/DeleteComplaintServ" scope="session" type="com.myapp.struts.DeleteComplaintServ" validate="false">
+             <forward name="success" path="/list_comp.jsp" />
+             <forward name="failure" path="/showComp_List.jsp"/>
+        </action>
+        <action input="/" name="StopBean" path="/DelStopPayReqServ" scope="request" type="com.myapp.struts.DelStopPayReqServ" validate="false">
+             <forward name="success" path="/liststopReq.jsp" />
+             <forward name="failure" path="/stopReqDetails.jsp"/>
+        </action>
+        <action input="/listuserstoppayment.jsp" name="StopBean" path="/ListUserStopPaymentServ" scope="request" type="com.myapp.struts.ListUserStopPaymentServ" validate="false">
+             <forward name="success" path="/showuserstoppayment.jsp" />
+             <forward name="failure" path="/userhome.jsp"/>
+        </action>
+        <action input="/showAc_Body.jsp" name="HolderBean" path="/DetailAcc" scope="request" type="com.myapp.struts.DetailAcc" validate="false">
+            <forward name="success" path="/holderDetail.jsp"/>
+        </action>
+        <action input="/emp_home.jsp" name="ClBean" path="/getAcc" scope="request" type="com.myapp.struts.getAcc"/>
+        <action input="/" name="DraftBean" path="/NewStrutsAction" scope="session" type="com.myapp.struts.NewStrutsAction"/>
+           
+    </action-mappings>
+
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>
+
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+
+</struts-config>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2015 8:58:09 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="book.Rack" table="RACK" schema="HR">
+        <id name="rackno" type="string">
+            <column name="RACKNO" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="subject" type="string">
+            <column name="SUBJECT" length="20" />
+        </property>
+        <set name="books" inverse="true">
+            <key>
+                <column name="RACKNO" length="5" />
+            </key>
+            <one-to-many class="book.Book" />
+        </set>
+    </class>
+</hibernate-mapping>

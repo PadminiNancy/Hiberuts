@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 14, 2015 12:53:38 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Studlog" table="STUDLOG" schema="HR">
+        <id name="sname" type="string">
+            <column name="SNAME" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="pass" type="string">
+            <column name="PASS" length="10" />
+        </property>
+        <set name="studregs" inverse="true">
+            <key>
+                <column name="SNAME" length="15" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="com.myapp.struts.Studreg" />
+        </set>
+    </class>
+</hibernate-mapping>

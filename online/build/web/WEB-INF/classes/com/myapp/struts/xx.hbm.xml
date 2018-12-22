@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.myapp.struts.Result" table="RESULT" schema="PROJECT">
+    <id name="rid" type="int">
+            <column name="RID" length="10" />
+            <generator class="increment" />
+        </id>
+        <property name="tmarks" type="int">
+            <column name="TMARKS" length="5" />
+        </property>
+        <property name="omarks" type="int">
+            <column name="OMARKS" length="5" />
+        </property>
+        <property name="dot" type="string">
+            <column name="DOT" length="7" />
+        </property>
+        <property name="scode" type="string">
+            <column name="SCODE" length="10" />
+        </property>
+        <property name="wa" type="string">
+            <column name="WA" length="10" />
+        </property>
+        <many-to-one name="login" class="com.myapp.struts.Login" fetch="select">
+            <column name="UNAME" length="50" />
+        </many-to-one>
+
+      </class>
+</hibernate-mapping>

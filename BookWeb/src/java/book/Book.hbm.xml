@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2015 8:58:09 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="book.Book" table="BOOK" schema="HR">
+        <id name="bno" type="int">
+            <column name="BNO" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="rack" class="book.Rack" fetch="select">
+            <column name="RACKNO" length="5" />
+        </many-to-one>
+        <property name="bname" type="string">
+            <column name="BNAME" length="20" />
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="PRICE" precision="3" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

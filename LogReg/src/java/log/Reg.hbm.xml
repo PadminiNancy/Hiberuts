@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 14, 2015 11:58:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="log.Reg" table="REG" schema="HR">
+        <id name="uname" type="string">
+            <column name="UNAME" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="loginn" class="log.Loginn" update="false" insert="false" fetch="select">
+            <column name="UNAME" length="20" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="addr" type="string">
+            <column name="ADDR" length="50" />
+        </property>
+        <property name="eid" type="string">
+            <column name="EID" length="50" />
+        </property>
+        <property name="cno" type="java.lang.Long">
+            <column name="CNO" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

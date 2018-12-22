@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Banking Information System-Transfer Money</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" href="css/mystyle.css" type="text/css" />
+<body>
+<table width=800 align=center border=0>
+<tr>
+<td align=center height=65 class=banner bgcolor=#8A4F28>Banking Information System</td>
+</tr>
+<tr height=350><td>
+<p>&nbsp;</p>
+<div align=center class=brownhead>
+<hr width=160>
+Transfer Money
+<hr width=160></div>
+<form action="./transfer_process.jsp" method="post">
+<table align=center bgcolor="FFFFCC">
+<tr align=center><td colspan=2 bgcolor="8A4F28"><font color=white><strong>From</font></td><td colspan=2 bgcolor="8A4F28"><font color=white><strong>To</font></td></tr>
+<tr>
+<td>Accont No.</td><td><input name="saccno" type="text" id="saccno"></td>
+<td>Account No.</td><td><input name="daccno" type="text" id="daccno"></td>
+</tr>
+<tr>
+<td>Account Type</td>
+<td>
+<select name="sacctype" id="sacctype">
+	<option selected>savings</option>
+    <option>current</option>
+</select>
+</td>
+<td>Account Type</td>
+<td><select name="dacctype" id="dacctype">
+	<option selected>savings</option>
+	<option>current</option>
+	</select>
+</td>
+</tr>
+<tr align=center><td colspan=4>&nbsp;</td></tr>
+<tr>
+<td colspan=2 align=right>Amount</td>
+<td colspan=2><input name="amount" type="text" id="amount"></td></tr>
+<tr>
+<td colspan=2 align=right>Transcation Done By</td>
+<td colspan=2><input name="name" type="text" id="name"></td></tr>
+<tr align=center><td colspan=4>
+<input type="submit" name="Submit" value="Submit">
+<input name="cancel" type="reset" id="cancel" value="Cancel">
+</td></tr>
+</table>
+</form>
+<div align=center><hr width=100>
+<a href="transactions.html" align=center class=bblink>Back</a>
+<hr width=100></div>
+</td></tr>
+<tr>
+<td align=center class=greysmall><hr width=800>
+All rights are reserved with E-Banking Solutions Pvt. Ltd.</td></tr>
+</table></body></html>

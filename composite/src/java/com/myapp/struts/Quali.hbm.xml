@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 25, 2015 6:17:00 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Quali" table="QUALI" schema="HR">
+        <composite-id name="id" class="com.myapp.struts.QualiId">
+            <key-property name="roll" type="string">
+                <column name="ROLL" length="15" />
+            </key-property>
+            <key-property name="qualif" type="string">
+                <column name="QUALIF" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="chatra" class="com.myapp.struts.Chatra" update="false" insert="false" fetch="select">
+            <column name="ROLL" length="15" not-null="true" />
+        </many-to-one>
+        <property name="dur" type="int">
+            <column name="DUR" precision="5" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+body {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;font-size:12px;background-color: #FDF4DF;
+	}
+
+td {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;font-size:12px;
+}
+.greysmall {
+	font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#999999;
+}
+	
+a:link {
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;color:#FFFFFF; text-decoration:none;
+}
+a:active {
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#FFFFFF; text-decoration:none;
+}
+a:visited {
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;color:#FFFFFF; text-decoration:none;
+}
+.banner {
+	font-family:"Book Antiqua";
+	font-size:50px;
+	color:#FFFFFF;
+	letter-spacing: 4px;
+}
+.violethead {
+	color: #843f8b;
+	font-weight: bold;
+}
+.violetsmall {font-size: 10px; color: #AE62AC;}
+.boldblack {
+	font-size: 10px;
+	font-weight: bold;
+}
+.boldred {
+	color: #CB3216;
+	font-size: 10px;
+	font-weight: bold;
+}
+.boldwhite {
+	color:#FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+}
+.yellowtext{
+	color:yellow;
+}

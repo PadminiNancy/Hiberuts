@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 17, 2016 10:03:39 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="android.Andlogin" table="ANDLOGIN" schema="HR">
+        <id name="roll" type="string">
+            <column name="ROLL" length="5" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="andreg" class="android.Andreg" update="false" insert="false" fetch="select">
+            <column name="ROLL" length="5" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="pass" type="string">
+            <column name="PASS" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

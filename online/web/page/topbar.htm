@@ -1,0 +1,69 @@
+<div class="wrapper col0">
+  <div id="topbar">
+    <div style="display: none;" id="slidepanel">
+      <div class="topbox">
+         <h2>Online Examination System</h2>
+        <p>Online examination is a new technique to conduct an 
+examination through internet. The formal examination system is a very 
+long procedure to conduct an examination. You just create an account 
+after creating the account you are getting a facility to prepare 
+yourself on online examination before getting appeared on the final 
+examination. </p>
+        <p class="readmore"><a href="#">Continue Reading </a></p>
+      </div>
+      <div class="topbox">
+        <h2>Admin Login Here</h2>
+        <form action="AdminLoginServ.do" method="post">
+          <fieldset>
+            <legend>Admin Login Form</legend>
+            <label for="uname">Username:
+              <input name="uname" id="uname" type="text">
+            </label>
+            <label for="pass">Password:
+              <input name="pass" id="pass" value="" type="password">
+            </label>
+            <label for="adminremember">
+              <input class="checkbox" name="adminremember" id="adminremember" checked="checked" type="checkbox">
+              Remember me</label>
+            <p>
+              <input name="adminlogin" id="adminlogin" value="Login" type="submit">
+              &nbsp;
+              <input name="adminreset" id="adminreset" value="Reset" type="reset">
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="topbox last">
+        <h2>User Login Here</h2>
+        <form action="LoginServ.do" method="post">
+          <fieldset>
+            <legend>User Login Form</legend>
+            <label for="uname">Username:
+              <input name="uname" id="uname" type="text">
+            </label>
+            <label for="pupilpass">Password:
+              <input name="pass" id="pass" value="" type="password">
+            </label>
+            <label for="pupilremember">
+              <input class="checkbox" name="pupilremember" id="pupilremember" checked="checked" type="checkbox">
+              Remember me</label>
+            <p>
+              <input name="pupillogin" id="pupillogin" value="Login" type="submit">
+              &nbsp;
+              <input name="pupilreset" id="pupilreset" value="Reset" type="reset">
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <br class="clear">
+    </div>
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Log In Here </li>
+        <li class="right" id="toggle"><a style="display: block;" id="slideit" href="#slidepanel">Admini/User</a><a id="closeit" style="display: none;" href="#slidepanel">Close Panel</a></li>
+      </ul>
+    </div>
+    <br class="clear">
+  </div>
+</div>
+

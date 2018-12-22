@@ -1,0 +1,64 @@
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 
+'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+
+<ejb-jar>
+  <enterprise-beans>
+    <entity>
+      <ejb-name>SavingsEJB</ejb-name>
+      <home>savings.SavingsHome</home>
+      <remote>savings.SavingsRemote</remote>
+      <ejb-class>savings.SavingsBean</ejb-class>
+      <persistence-type>Container</persistence-type>
+      <prim-key-class>java.lang.String</prim-key-class>
+      <reentrant>False</reentrant>
+	  <cmp-version>2.x</cmp-version>
+      <cmp-field>
+        <field-name>accno</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>acctype</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>balance</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>name</field-name>
+      </cmp-field>
+     <cmp-field>
+        <field-name>opendate</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>address</field-name>
+      </cmp-field>
+         
+      <cmp-field>
+        <field-name>phone</field-name>
+      </cmp-field>
+
+      <cmp-field>
+	<field-name>occupation</field-name>
+      </cmp-field>
+
+      <cmp-field>
+        <field-name>nation</field-name>
+      </cmp-field>
+
+      <cmp-field>
+        <field-name>cheque</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>income</field-name>
+     </cmp-field>
+      <cmp-field>
+        <field-name>status</field-name>
+     </cmp-field>
+	<cmp-field>
+        <field-name>dob</field-name>
+     </cmp-field>
+	<cmp-field>
+        <field-name>gender</field-name>
+     </cmp-field>
+  <primkey-field>accno</primkey-field>
+    </entity>
+  </enterprise-beans>
+ </ejb-jar>

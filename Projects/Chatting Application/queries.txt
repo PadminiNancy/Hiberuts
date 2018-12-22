@@ -1,0 +1,10 @@
+create table login(
+loginid varchar2(10) primary key,
+name varchar2(30),
+password varchar2(10),
+email varchar2(20),
+type varchar2(6));
+
+create table chatrooms(
+roomname varchar2(10) primary key,
+roomdesc varchar2(30));

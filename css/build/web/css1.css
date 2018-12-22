@@ -1,0 +1,55 @@
+/* 
+    Document   : css1
+    Created on : Apr 21, 2015, 6:54:47 PM
+    Author     : Nancy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+h1{
+
+    font-style:italic;
+    color:teal;
+
+}
+
+title{
+    font-family:fantasy;
+    color:red;
+    font-weight:bold;
+}
+
+body{
+    font-family:sans-serif;
+    color:maroon;
+    background-color:orange;
+}
+
+p{
+    font-style:oblique;
+    font-size:large;
+    font-variant:inherit;
+    color:purple;
+
+}
+a{
+    text-decoration:blink;
+    color:blue;
+    font-weight:bold;
+   
+   
+}
+
+.padmini{
+ color:fuchsia;
+ font:bolder;
+ font-style:italic;
+}
+
+
+
+

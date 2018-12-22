@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2015 6:01:25 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Question" table="QUESTION" schema="PROJECT">
+        <id name="qid" type="long">
+            <column name="QID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="topic" class="com.myapp.struts.Topic" fetch="select">
+            <column name="TCODE" length="10" />
+        </many-to-one>
+        <property name="ques" type="string">
+            <column name="QUES" length="1000" />
+        </property>
+        <property name="opt1" type="string">
+            <column name="OPT1" length="50" />
+        </property>
+        <property name="opt2" type="string">
+            <column name="OPT2" length="50" />
+        </property>
+        <property name="opt3" type="string">
+            <column name="OPT3" length="50" />
+        </property>
+        <property name="opt4" type="string">
+            <column name="OPT4" length="50" />
+        </property>
+        <property name="cans" type="string">
+            <column name="CANS" length="50" />
+        </property>
+        <property name="marks" type="int">
+            <column name="MARKS" precision="3" scale="0" />
+        </property>
+        <property name="clev" type="string">
+            <column name="CLEV" length="10" />
+        </property>
+        <property name="scode" type="string">
+            <column name="SCODE" length="10" />
+        </property>
+        <property name="quesimg" type="string">
+            <column name="QUESIMG" length="1024" />
+        </property>
+    </class>
+</hibernate-mapping>

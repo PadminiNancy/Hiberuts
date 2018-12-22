@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Banking Information System-View Account</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" href="css/mystyle.css" type="text/css" />
+<body>
+<table width=800 align=center border=0>
+<tr>
+<td align=center height=65 class=banner bgcolor=#8A4F28>Banking Information System</td>
+</tr>
+<tr height=350><td>
+<p>&nbsp;</p><p>&nbsp;</p>
+<div align=center class=brownhead>Enter Your Account Number.</div><br>
+<form action="./viewaccount_process.jsp" method="post" >
+<table border="0" align="center" bgcolor="#FFFFCC" cellspacing=5 cellpadding=5>
+    <tr> 
+      <td>Account No.</td>
+      <td> <input name="accno" type="text" id="accno"></td>
+    </tr>
+    <tr> 
+      <td>Account Type</td>
+      <td><select name="type" id="type">
+          <option selected>savings</option>
+          <option>current</option>
+          <option>recurring</option>
+        </select></td>
+    </tr>
+	<tr align=center><td colspan=2>
+		<input type="submit" name="Submit" value="Submit">
+		<input type="reset" name="Submit2" value="Reset">
+	</td></tr>
+  </table>
+  </form>
+  <div align=center><hr width=100>
+	<a href="bankmaster.html" class=bblink>Back</a>
+	<hr width=100></div>
+</td></tr>
+<tr>
+<td align=center class=greysmall><hr width=800>
+All rights are reserved with E-Banking Solutions Pvt. Ltd.</td></tr>
+</table></body></html>

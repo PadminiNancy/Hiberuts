@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 13, 2015 3:30:50 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Receipt" table="RECEIPT" schema="EDS">
+        <id name="rcpno" type="short">
+            <column name="RCPNO" precision="3" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="stud" class="com.myapp.struts.Stud" fetch="select">
+            <column name="ROLL" precision="3" scale="0" />
+        </many-to-one>
+        <property name="amt" type="java.lang.Byte">
+            <column name="AMT" precision="2" scale="0" />
+        </property>
+        <property name="rcpdt" type="date">
+            <column name="RCPDT" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

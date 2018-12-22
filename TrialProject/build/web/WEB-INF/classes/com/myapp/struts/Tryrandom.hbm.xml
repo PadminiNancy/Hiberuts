@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2015 8:26:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Tryrandom" table="TRYRANDOM" schema="HR">
+        <id name="sno" type="short">
+            <column name="SNO" precision="3" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="value" type="string">
+            <column name="VALUE" length="10" />
+        </property>
+        <property name="clev" type="string">
+            <column name="CLEV" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

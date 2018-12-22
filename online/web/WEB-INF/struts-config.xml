@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="NewStrutsBean" type="com.myapp.struts.NewStrutsBean"/>
+        <form-bean name="Login" type="com.myapp.struts.Login"/>
+        <form-bean name="Question" type="com.myapp.struts.Question"/>
+        <form-bean name="Subject" type="com.myapp.struts.Subject"/>
+        <form-bean name="Topic" type="com.myapp.struts.Topic"/>
+        <form-bean name="Result" type="com.myapp.struts.Result"/>
+        <form-bean name="WrongTopic" type="com.myapp.struts.WrongTopic"/>
+        <form-bean name="AdLogin" type="com.myapp.struts.AdLogin"/>
+         <form-bean name="ARegister" type="com.myapp.struts.ARegister"/>
+         <form-bean name="URegister" type="com.myapp.struts.URegister"/>
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/adminlogin.jsp" name="AdLogin" path="/AdminLoginServ" scope="request" type="com.myapp.struts.AdminLoginServ">
+           <forward name="success"  path="/adminhome.jsp"/>
+        </action>
+        <action input="/setques.jsp" name="Question" path="/SetQuesServ" scope="request" type="com.myapp.struts.SetQuesServ">
+            <forward name="success"  path="/next.jsp"/>
+        </action>
+        <action input="/subentry.jsp" name="Subject" path="/AddSubServ" scope="request" type="com.myapp.struts.AddSubServ">
+
+            <forward name="success"  path="/next.jsp"/>
+
+
+            </action>
+            <action input="/topicentry.jsp" name="Topic" path="/AddTopicServ" scope="request" type="com.myapp.struts.AddTopicServ">
+                 <forward name="success"  path="/next.jsp"/>
+            </action>
+        
+        <action input="/settest.jsp" name="Question" path="/SetTestServ" scope="request" type="com.myapp.struts.SetTestServ">
+            <forward name="success"  path="/next.jsp"/>
+        </action>
+       
+        <action input="/register.jsp" name="Login" path="/RegisterServ" scope="request" type="com.myapp.struts.RegisterServ">
+            <forward name="success"  path="/register2.jsp"/>
+        </action>
+        <action input="/login.jsp" name="Login" path="/LoginServ" scope="request" type="com.myapp.struts.LoginServ">
+            <forward name="success"  path="/userhome.jsp"/>
+        </action>
+        <action input="/StartTestServ.do" name="Question" path="/QuesGenServ" scope="request" type="com.myapp.struts.QuesGenServ">
+           <forward name="success"  path="/QdispServ.do"/>
+        </action>
+        <action path="/FetchAllQuestServ" type="com.myapp.struts.FetchAllQuestServ">
+             <forward name="success"  path="/viewquest.jsp"/>
+            </action>
+            <action input="/QuesGenServ.do" name="Question" path="/QdispServ" scope="request" type="com.myapp.struts.QdispServ">
+               <forward name="success"  path="/quesdisp.jsp"/>
+            </action>
+            <action input="/quesdisp.jsp" name="Question" path="/NextServ" scope="request" type="com.myapp.struts.NextServ">
+                
+            </action>
+            <action input="/quesdisp.jsp" name="Question" path="/PrevServ" scope="request" type="com.myapp.struts.PrevServ">
+                
+            </action>
+            <action input="/quesdisp.jsp" name="Question" path="/ResultServ" scope="request" type="com.myapp.struts.ResultServ">
+               <forward name="success"  path="/result.jsp"/> 
+            </action>
+            <action input="/userhome.jsp" name="Result" path="/TestHistoryServ" scope="request" type="com.myapp.struts.TestHistoryServ">
+                <forward name="success"  path="/testHistory.jsp"/> 
+            </action>
+            <action input="/register2.jsp" name="URegister" path="/Register2Serv" scope="request" type="com.myapp.struts.Register2Serv">
+                <forward name="success"  path="/successReg.jsp"/>
+            </action>
+            <action input="/adminReg2.jsp" name="ARegister" path="/AdminReg2Serv" scope="request" type="com.myapp.struts.AdminReg2Serv">
+                <forward name="success"  path="/successReg.jsp"/>
+            </action>
+            <action input="/adminReg1.jsp" name="AdLogin" path="/AdminReg1Serv" scope="request" type="com.myapp.struts.AdminReg1Serv">
+               <forward name="success"  path="/adminReg2.jsp"/> 
+            </action>
+            <action input="/editAdminProf.jsp" name="ARegister" path="/EditAdminProfServ" scope="request" type="com.myapp.struts.EditAdminProfServ">
+               <forward name="success"  path="/next.jsp"/> 
+            </action>
+           
+           
+        <action input="/startTest.jsp" name="Question" path="/StartTestServ" scope="request" type="com.myapp.struts.StartTestServ"/>
+        <action path="success" forward="/QuesGenServ.do"/>
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

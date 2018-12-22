@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.myapp.struts.ARegister" table="AREGISTER" schema="PROJECT">
+      
+     <id name="rid" type="int">
+            <column name="RID" length="20" />
+            <generator class="increment" />
+        </id>
+    <many-to-one name="adlogin" class="com.myapp.struts.AdLogin" fetch="select">
+            <column name="UNAME" length="50" />
+        </many-to-one>
+     <property name="dob" type="string">
+            <column name="DOB" length="7" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="100" />
+        </property>
+        <property name="quali" type="string">
+            <column name="QUALI" length="25" />
+        </property>
+        <property name="post" type="string">
+            <column name="POST" length="100" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="15" />
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="200" />
+        </property>
+        
+      
+  </class>
+</hibernate-mapping>

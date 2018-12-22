@@ -1,0 +1,16 @@
+/* CSS Document */
+
+.quesback{background-image:url(Girl_happy_main-425x282.jpg);
+          background-repeat: no-repeat;
+          background-position: 200px 200px;
+          background-attachment:  inherit;
+          opacity: 0.8;
+		  }
+h1.red{color:#FF0000;}
+div {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+

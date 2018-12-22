@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2014 10:57:55 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hiberreceipt.Receipt" table="RECEIPT" schema="HR">
+        <id name="rectno" type="int">
+            <column name="RECTNO" precision="3" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="stud1" class="hiberreceipt.Stud1" fetch="select">
+            <column name="ROLL" precision="3" scale="0" />
+        </many-to-one>
+        <property name="amt" type="int">
+            <column name="AMT" precision="4" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

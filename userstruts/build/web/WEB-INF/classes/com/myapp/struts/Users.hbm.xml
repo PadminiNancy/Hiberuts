@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 13, 2015 8:07:42 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Users" table="USERS" schema="HR">
+        <id name="uname" type="string">
+            <column name="UNAME" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="pass" type="string">
+            <column name="PASS" length="8" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="20" />
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

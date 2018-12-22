@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Educational
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Online Examination System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="template/style/layout.css">
+
+<script type="text/javascript" src="template/script/jquery_002.js"></script>
+<script type="text/javascript" src="template/script/jquery_003.js"></script>
+<script type="text/javascript" src="template/script/jquery_004.js"></script>
+<script type="text/javascript" src="template/script/jquery.js"></script>
+<!--
+.style1 {font-size: x-large}
+-->
+
+</head>
+<body>
+<div class="wrapper col0">
+  <div id="topbar">
+    <div style="display: none;" id="slidepanel">
+      <div class="topbox">
+         <h2>Online Examination System</h2>
+        <p>Online examination is a new technique to conduct an 
+examination through internet. The formal examination system is a very 
+long procedure to conduct an examination. You just create an account 
+after creating the account you are getting a facility to prepare 
+yourself on online examination before getting appeared on the final 
+examination. </p>
+        <p class="readmore"><a href="#">Continue Reading »</a></p>
+      </div>
+      <div class="topbox">
+        <h2>Admin Login Here</h2>
+        <form action="../AdminLoginServ.do" method="post">
+          <fieldset>
+            <legend>Admin Login Form</legend>
+            <label for="uname">Username:
+              <input name="uname" id="uname" type="text">
+            </label>
+            <label for="pass">Password:
+              <input name="pass" id="pass" value="" type="password">
+            </label>
+            <label for="adminremember">
+              <input class="checkbox" name="adminremember" id="adminremember" checked="checked" type="checkbox">
+              Remember me</label>
+            <p>
+              <input name="adminlogin" id="adminlogin" value="Login" type="submit">
+              &nbsp;
+              <input name="adminreset" id="adminreset" value="Reset" type="reset">
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="topbox last">
+        <h2>User Login Here</h2>
+        <form action="../LoginServ.do" method="post">
+          <fieldset>
+            <legend>User Login Form</legend>
+            <label for="uname">Username:
+              <input name="uname" id="uname" type="text">
+            </label>
+            <label for="pupilpass">Password:
+              <input name="pass" id="pass" value="" type="password">
+            </label>
+            <label for="pupilremember">
+              <input class="checkbox" name="pupilremember" id="pupilremember" checked="checked" type="checkbox">
+              Remember me</label>
+            <p>
+              <input name="pupillogin" id="pupillogin" value="Login" type="submit">
+              &nbsp;
+              <input name="pupilreset" id="pupilreset" value="Reset" type="reset">
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <br class="clear">
+    </div>
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Log In Here »</li>
+        <li class="right" id="toggle"><a style="display: block;" id="slideit" href="#slidepanel">Admini/User</a><a id="closeit" style="display: none;" href="#slidepanel">Close Panel</a></li>
+      </ul>
+    </div>
+    <br class="clear">
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+        <div class="imgholder"><a href="#"><img src="images/logo.jpg" height="76" width="390"></a></div>
+      <h1><a href="http://localhost:27073/OnExSys/index.html" class="style1">Online Examination System </a></h1>
+      <p></p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li class="last"><a href="#">Search</a></li>
+        <li><a href="#">Online Support</a></li>
+        <li><a href="#">School Board</a></li>
+      </ul>
+      <p>Tel: 8871826784 | Mail: vvmishra2001@yahoo.com</p>
+    </div>
+    <br class="clear">
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<% %>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="featured_slide">
+    <div id="featured_wrap">
+      <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" id="featured_tabs">
+		<li aria-expanded="false" aria-selected="false" aria-labelledby="ui-id-1" aria-controls="fc1" tabindex="-1" role="tab" class="style2 ui-state-default ui-corner-top">
+
+          <div align="left"><a id="ui-id-1" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#fc1">FRIENDLY SUPPORT AND REGULAR UPDATES <br>
+          </a></div>
+		</li>
+        <li aria-expanded="true" aria-selected="true" aria-labelledby="ui-id-2" aria-controls="fc2" tabindex="0" role="tab" class="ui-state-default ui-corner-top ui-tabs-active ui-state-active"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#fc2">NINE TYPE OF QUESTION <br>
+          </a></li>
+        <li aria-expanded="false" aria-selected="false" aria-labelledby="ui-id-3" aria-controls="fc3" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-3" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#fc3">CATEGORIZED YOUR EXAM <br>
+          </a></li>
+        <li aria-expanded="false" aria-selected="false" aria-labelledby="ui-id-4" aria-controls="fc4" tabindex="-1" role="tab" class="last ui-state-default ui-corner-top"><a id="ui-id-4" tabindex="-1" role="presentation" class="ui-tabs-anchor" href="#fc4">ANALYSIS AND FOREFRONT <br>
+          </a></li>
+      </ul>
+      <div id="featured_content">
+        <div style="display: none;" aria-hidden="true" role="tabpanel" aria-labelledby="ui-id-1" class="featured_box ui-tabs-panel ui-widget-content ui-corner-bottom" id="fc1"><img src="template/images/slides/12.jpg" alt="">
+          <div class="floater"><a href="#">Continue Reading »</a></div>
+        </div>
+        <div aria-hidden="false" style="display: block;" role="tabpanel" aria-labelledby="ui-id-2" class="featured_box ui-tabs-panel ui-widget-content ui-corner-bottom" id="fc2"><img src="template/images/slides/13.jpg" alt="">
+          <div class="floater"><a href="#">Continue Reading »</a></div>
+        </div>
+        <div aria-hidden="true" style="display: none;" role="tabpanel" aria-labelledby="ui-id-3" class="featured_box ui-tabs-panel ui-widget-content ui-corner-bottom" id="fc3"><img src="template/images/slides/14.jpg" alt="">
+          <div class="floater"><a href="#">Continue Reading »</a></div>
+        </div>
+        <div aria-hidden="true" style="display: none;" role="tabpanel" aria-labelledby="ui-id-4" class="featured_box ui-tabs-panel ui-widget-content ui-corner-bottom" id="fc4"><img src="template/images/slides/15.jpg" alt="">
+          <div class="floater"><a href="#">Continue Reading »</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="container">
+    <div id="hpage">
+      <ul>
+        <li>
+          <h2>C Language </h2>
+          <div class="imgholder"><a href="#"><img src="images/c.jpg" :="" alt="" height="150" width="200"></a></div>
+          <p>C is one of the most widely used programming languages of 
+all time. It is robust language with rich set of built-in function and 
+operators that can be used to write any complex program. Program written
+ in C are efficient and fast. C language is the most widely used 
+language in operating system. </p>
+          <p class="readmore"><a href="#">Continue Reading »</a></p>
+        </li>
+        <li>
+          <h2>C++ Language </h2>
+          <div class="imgholder"><a href="#"><img src="images/c.png" :="" alt="" height="150" width="200"></a></div>
+          <p>It is an extension to C language developed by Bjarne 
+Stroustrup. C++ is an Object Oriented programming language. It is not 
+purely object oriented. All the OOPS features in C++ like 
+Abstraction,Encapsulation,Inheritanc etc makes it more worthy and useful
+ for programmers. C++ can be said to be as C language with classes. </p>
+          <p class="readmore"><a href="#">Continue Reading »</a></p>
+        </li>
+        <li>
+
+
+          <h2>Core Java </h2>
+          <div class="imgholder"><a href="#"><img src="images/java.jpg" :="" alt="" height="150" width="200"></a></div>
+          <p>Java was developed by James Ghosling, patrick naughton,Mike
+ Sheridan at Sun MicroSystem.Inc in 1991. Initial name was Oak but was 
+rename was Java in 1995. It is important for developing desktop 
+application,web applications,mobile OS like Android,Embeded 
+System,Robotics and games etc. </p>
+          <p class="readmore"><a href="#">Continue Reading »</a></p>
+        </li>
+        <li class="last">
+          <h2>Operating System </h2>
+          <div class="imgholder"><a href="#"><img src="images/os.jpg" :="" alt="" height="150" width="200"></a></div>
+          <p>Computer has many resources(hardware/software),which may be
+ required to complete a task. The commonly required resources are 
+input/output devices,memory,files storage space,CPU etc. It has many 
+important management task like proccessor management,memory management, 
+device management etc. </p>
+          <p class="readmore"><a href="#">Continue Reading »</a></p>
+        </li>
+      </ul>
+      <br class="clear">
+<div class="wrapper col5">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input value="Enter Email Here…" onfocus="this.value=(this.value=='Enter Email Here…')? '' : this.value ;" type="text">
+          <input name="news_go" id="news_go" value="GO" type="submit">
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here »</a></p>
+    </div>
+    <div class="footbox">
+      <h2>What we do!! </h2>
+      <ul>
+        <li><a href="#"></a>We are providing a fairly simple, flexible, 
+customized and cost   Effective Online Examination Management System 
+that developed for   Educational Institutions. We work flexibly with 
+clients to fulfill their examination   needs. OES is a ready made system
+ where you can start conducting online   exams in a day. we are 
+confident you will be pleased with the results. </li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Online Examination System </h2>
+      <ul>
+        <li><a href="#">This Web based online examination system 
+provides facility to conduct   online examination world wide.This 
+application saves time as it allows   number of students to give the 
+online exam at a time and displays the   results as the test gets over, 
+so no need to wait for the result.</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Contact Us </h2>
+      <ul>
+        <li><a href="#"></a>Behind Rama Nurshing Home,<br>
+Opp. Gel Church Complex,<br>
+Metro Furniture Gali,<br>
+Main Road, Ranchi (Jharkhand).<br>
+Phone No :-(0651)-2330830.<br>
+Mobile No :- 9031149400</li>
+        <li>we are open:-</li>
+        <li>MONDAY-SATURDAY 10AM-8AM</li>
+        <li>Email:- vvmishra2001@yahoo.com</li>
+      </ul>
+    </div>
+    <br class="clear">
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright © 2015 - All Rights Reserved - Excel Data Service </p>
+    <p class="fl_right">&nbsp;</p>
+    <br class="clear">
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+<!-- ####################################################################################################### -->
+</div></body></html>

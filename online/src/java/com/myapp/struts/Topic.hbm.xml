@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2015 6:01:25 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Topic" table="TOPIC" schema="PROJECT">
+        <id name="tcode" type="string">
+            <column name="TCODE" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="subject" class="com.myapp.struts.Subject" fetch="select">
+            <column name="SCODE" length="10" />
+        </many-to-one>
+        <property name="topic" type="string">
+            <column name="TOPIC" length="30" />
+        </property>
+        <set name="questions" inverse="true">
+            <key>
+                <column name="TCODE" length="10" />
+            </key>
+            <one-to-many class="com.myapp.struts.Question" />
+        </set>
+    </class>
+</hibernate-mapping>

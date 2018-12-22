@@ -1,0 +1,12 @@
+SMAP
+myNext_jsp.java
+JSP
+*S JSP
+*F
++ 0 myNext.jsp
+WEB-INF/jsp/myNext.jsp
+*L
+5,13:53
+18:66,3
+19,3:69
+*E

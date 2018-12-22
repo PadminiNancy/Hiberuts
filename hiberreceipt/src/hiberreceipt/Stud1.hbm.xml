@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2014 10:57:55 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hiberreceipt.Stud1" table="STUD1" schema="HR">
+        <id name="roll" type="int">
+            <column name="ROLL" precision="3" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="10" />
+        </property>
+        <property name="age" type="int">
+            <column name="AGE" precision="3" scale="0" />
+        </property>
+        <set name="receipts" inverse="true">
+            <key>
+                <column name="ROLL" precision="3" scale="0" />
+            </key>
+            <one-to-many class="hiberreceipt.Receipt" />
+        </set>
+    </class>
+</hibernate-mapping>

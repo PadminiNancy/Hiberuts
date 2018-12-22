@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Banking Information System-Customer Report</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<link rel="stylesheet" href="css/mystyle.css" type="text/css" />
+<body>
+<table width=800 align=center border=0>
+<tr>
+<td align=center height=65 class=banner bgcolor=#8A4F28>Banking Information System</td>
+</tr>
+<tr height=350><td>
+<form action="./cdate_report_process.jsp" method="post" >
+<div align=center class=brownhead>Customer Daily Report</div><br><br>
+<table border="0" align="center" bgcolor="#FFFFCC" cellpadding=5>
+<tr><td>Enter Account Number</td>
+		<td><input name="accno" type="text" id="accno">
+		</td>
+    </tr>
+	<tr><td>Enter Account Type</td>
+		<td>
+		<select name="acctype" id="acctype">
+			<option selected>savings</option>
+			<option>current</option>
+			<option>recurring</option>
+		</select></td>
+    </tr>
+    <tr><td>Enter Date</td>
+      <td><input name="date" type="text" id="date"> (yyyy-mm-dd)</td>
+    </tr>
+	<tr align=center><td colspan=2>
+		<input type="submit" name="Submit" value="Submit">
+		<input type="reset" name="Submit2" value="Reset">
+	</td></tr>
+  </table>
+  </form>
+<div align=center><hr width=100><a href="reports.html" class=bblink>Back</a>
+<hr width=100></td></tr>
+<tr>
+<td align=center class=greysmall><hr width=800>
+All rights are reserved with E-Banking Solutions Pvt. Ltd.</td></tr>
+</table></body></html>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 27, 2015 7:29:14 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Register" table="REGISTER" schema="HR">
+        <id name="roll" type="int">
+            <column name="ROLL" precision="3" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="loginid" class="com.myapp.struts.Loginid" fetch="select">
+            <column name="UNAME" length="30" />
+        </many-to-one>
+        <property name="email" type="string">
+            <column name="EMAIL" length="30" />
+        </property>
+        <property name="doa" type="string">
+            <column name="DOA" length="7" />
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

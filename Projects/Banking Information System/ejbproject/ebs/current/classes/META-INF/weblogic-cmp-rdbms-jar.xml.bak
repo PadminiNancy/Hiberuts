@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-rdbms-jar PUBLIC '-//BEA Systems, Inc.//DTD WebLogic 8.1.0 EJB RDBMS Persistence//EN' 'http://www.bea.com/servers/wls810/dtd/weblogic-rdbms20-persistence-810.dtd'>
+
+<weblogic-rdbms-jar>
+  <weblogic-rdbms-bean>
+    <ejb-name>CurrentEJB</ejb-name>
+    <data-source-name>AdiPool</data-source-name>
+	 <table-map>
+    <table-name>curent</table-name>
+   
+
+    <field-map>
+      <cmp-field>accno</cmp-field>
+      <dbms-column>accno</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>name</cmp-field>
+      <dbms-column>name</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>acctype</cmp-field>
+      <dbms-column>acctype</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>opendate</cmp-field>
+      <dbms-column>opendate</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>balance</cmp-field>
+      <dbms-column>balance</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>address</cmp-field>
+      <dbms-column>address</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>phone</cmp-field>
+      <dbms-column>phone</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>income</cmp-field>
+      <dbms-column>income</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>nation</cmp-field>
+      <dbms-column>nation</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>occupation</cmp-field>
+      <dbms-column>occupation</dbms-column>
+    </field-map>
+    <field-map>
+      <cmp-field>cheque</cmp-field>
+      <dbms-column>cheque</dbms-column>
+    </field-map>
+
+   <field-map>
+      <cmp-field>dob</cmp-field>
+      <dbms-column>dob</dbms-column>
+    </field-map>
+<field-map>
+      <cmp-field>gender</cmp-field>
+      <dbms-column>gender</dbms-column>
+    </field-map>
+<field-map>
+      <cmp-field>income</cmp-field>
+      <dbms-column>income</dbms-column>
+    </field-map>
+<field-map>
+      <cmp-field>status</cmp-field>
+      <dbms-column>status</dbms-column>
+    </field-map>
+
+</table-map>
+
+  </weblogic-rdbms-bean>
+
+</weblogic-rdbms-jar>
+ 
+ 
+ 
+ 
+ 
+
+

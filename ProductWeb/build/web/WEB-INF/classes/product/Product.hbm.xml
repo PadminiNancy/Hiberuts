@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2014 10:23:26 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="product.Product" table="PRODUCT" schema="HR">
+        <id name="prodno" type="int">
+            <column name="PRODNO" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="prodname" type="string">
+            <column name="PRODNAME" length="20" />
+        </property>
+        <property name="price" type="int">
+            <column name="PRICE" precision="4" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+        <script>
+
+
+//This script is used for slide images
+//Begin
+NewImg = new Array("images/32.jpg", "images/26.jpg", "images/30.jpg", "images/28.jpg", "images/31.jpg", "images/33.jpg");
+var ImgNum = 0;
+var ImgLength = NewImg.length - 1;
+//Time delay between Slides in milliseconds
+var delay = 6000;
+var lock = false;
+var run;
+function chgImg(direction)
+{
+if (document.images)
+{
+ImgNum = ImgNum + direction;
+if (ImgNum > ImgLength)
+ {
+ImgNum = 0;
+}
+if (ImgNum < 0)
+{
+ImgNum = ImgLength;
+}
+document.slideshow.src = NewImg[ImgNum];
+   }
+}
+function auto()
+ {
+if (lock == true)
+{
+lock = false;
+window.clearInterval(run);
+}
+else if (lock == false)
+{
+lock = true;
+run = setInterval("chgImg(1)", delay);
+  }
+}
+
+        </script>
+  </head>
+  <body onload="javascript:auto()">
+      <table>
+          <tr>
+              <td>
+                 <img src="images/25.jpg" name="slideshow" width="800px" height="400px" />
+              </td>
+          </tr>
+
+      </table>
+  </body>
+</html>

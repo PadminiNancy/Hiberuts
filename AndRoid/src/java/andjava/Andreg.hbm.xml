@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 21, 2016 10:04:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="andjava.Andreg" table="ANDREG" schema="HR">
+        <id name="roll" type="string">
+            <column name="ROLL" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="sname" type="string">
+            <column name="SNAME" length="30" />
+        </property>
+        <property name="cno" type="string">
+            <column name="CNO" length="10" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="80" />
+        </property>
+        <set name="andlogins" inverse="true">
+            <key>
+                <column name="ROLL" length="5" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="andjava.Andlogin" />
+        </set>
+    </class>
+</hibernate-mapping>
